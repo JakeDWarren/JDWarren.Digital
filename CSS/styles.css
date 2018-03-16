@@ -4,6 +4,8 @@ body,html{
   padding: 0;
   font-family: 'Ubuntu', sans-serif;
   position: relative;
+  background-color: black;
+  z-index: -3;
 }
 
 #parallax1{
@@ -41,34 +43,54 @@ body,html{
     z-index: 0;
     position: relative;
     text-align: center;
-
-
+    color: #fff;
 }
 
 .aboutMeSection{
   background: #d8d8d8;
   min-height: 1000px;
-
 }
 
-/*
-#midground {
-	background: url(../Assets/images/Middle.png) no-repeat 0% 50%;
-  width: 100%;
+nav ul{
+  list-style: none;
+  overflow: hidden;
   position: fixed;
-	top: 0; left: 0; bottom: 0; right: 0;
-	z-index: -2;
+  z-index: 1;
+  right: 0;
 }
 
-#foreground {
-	background: url(../Assets/images/Front.png) no-repeat 0% 30%;
-  width: 100%;
-  position: fixed;
-	top: 0; left: 0; bottom: 0; right: 0;
-	z-index: -1;
+nav ul li{
+  float: left;
+  margin: 0 0 0 0;
 }
 
-.aboutMeSection{
-  background: #eaeaea;
-  min-height: 400px;
+nav ul li a{
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 25px
+}
+
+nav ul li:nth-child(1) a{
+  background-color: #ffaeae;
+  color: #d8d8d8;
+  text-align: center;
+}
+
+nav ul li:nth-child(2) a{
+  background-color: #ffaeae;
+  color: #d8d8d8;
+  text-align: center;
+}
+
+nav ul li:nth-child(3) a{
+  background-color: #ffaeae;
+  color: #d8d8d8;
+  text-align: center;
+}
+
+nav ul li:nth-child(4) a{
+  background-color: #ffaeae;
+  color: #d8d8d8;
+  text-align: center;
 }
