@@ -5,7 +5,7 @@ body,html{
   font-family: 'Ubuntu', sans-serif;
   position: relative;
   background-color: black;
-  z-index: -3;
+  z-index: 0;
 
 }
 
@@ -20,13 +20,13 @@ nav ul{
   list-style: none;
   overflow: hidden;
   position: fixed;
-  z-index: 1;
   right: 8%;
 }
 
 nav ul li{
   float: left;
   margin: 0 0 0 0;
+  z-index: 1;
 }
 
 nav ul li a{
@@ -66,8 +66,7 @@ nav ul li div{
 
 nav ul li a:hover + div{
   display: flex;
-  opacity: 1;
-  filter: drop-shadow(5px 5px 5px );
+  opacity: 2;
 }
 
 #parallax1{
@@ -108,11 +107,11 @@ nav ul li a:hover + div{
 
 .home{
   height: 100%;
-  z-index: 0;
   position: relative;
   text-align: center;
   color: #fff;
   filter: drop-shadow(3px 3px 3px black);
+  z-index: -1;
 }
 
 .portfolio{
@@ -131,4 +130,77 @@ nav ul li a:hover + div{
   background: #d8d8d8;
   min-height: 100%;
   height: auto;
+}
+
+.titleTextP{
+  height: 40px;
+  width: auto;
+  margin: 0 0 0 0;
+  color: #d8d8d8;
+  background-color: #ffaeae;
+  position: absolute;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.titleTextG{
+  height: 40px;
+  width: auto;
+  margin: 0 0 0 0;
+  color: #ffaeae;
+  background-color: #d8d8d8;
+  position: absolute;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.card{
+  position: relative;
+  color: #ffaeae;
+  border-color: #ffaeae;
+  border-width: thick;
+  font-size: 17px;
+  justify-content: center;
+  z-index: 0;
+  transition-duration: 0.5s;
+}
+
+.card:hover{
+  transform: scale(1.05);
+  filter: drop-shadow(3px 3px 10px black);
+  z-index: 1;
+}
+
+.card-header{
+  font-size: 20px;
+}
+
+/*
+ *  Responsive Grid Media Queries
+ *   1280-1024   - desktop (default grid)
+ *   1024-768    - tablet landscape
+ *   768-480     - tablet
+ *   480-less    - phone landscape & smaller
+ */
+
+@media all and (min-width: 1024px) and (max-width: 1280px) { }
+
+@media all and (min-width: 768px) and (max-width: 1024px) { }
+
+@media all and (min-width: 480px) and (max-width: 768px) { }
+
+@media all and (max-width: 480px) {
+ h1{
+   font-size: 25px;
+ }
+
+ h2{
+   font-size: 20px;
+ }
+
+ .titleTextP, .titleTextG{
+   height: 24px;
+
+ }
+
 }
