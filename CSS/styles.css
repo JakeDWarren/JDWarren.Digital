@@ -6,14 +6,6 @@ body,html{
   position: relative;
   background-color: black;
   z-index: 0;
-
-}
-
-/*Snap scrolling only compatible with Firefox at current time but under development for chrome and safari*/
-.scroller {
-  scroll-snap-type: mandatory;
-  scroll-snap-destination: 0% 100%;
-  scroll-snap-points-y: repeat(100%);
 }
 
 nav ul{
@@ -26,7 +18,6 @@ nav ul{
 nav ul li{
   float: left;
   margin: 0 0 0 0;
-  z-index: 1;
 }
 
 nav ul li a{
@@ -37,11 +28,13 @@ nav ul li a{
   text-align: center;
   color: #d8d8d8;
   background-color: #ffaeae;
+
 }
 
 nav ul li a:hover{
   color: #ffaeae;
   background-color: #d8d8d8;
+
 }
 
 nav ul li div{
@@ -54,7 +47,6 @@ nav ul li div{
   filter: drop-shadow(5px 5px 5px black);
   top:0; right:0; left:0; bottom:0;
   background-color: #d8d8d8;
-  z-index: -1;
   width: 100%;
   height: 100%;
   transition-duration: 0.5s;
@@ -62,47 +54,19 @@ nav ul li div{
   text-align: center;
   justify-content: center;
   align-items: center;
+  z-index: -2;
 }
 
 nav ul li a:hover + div{
   display: flex;
-  opacity: 2;
-}
-
-#parallax1{
-  background: url(../Assets/images/Background.png) no-repeat 0% 100%; //Does not yet work on 1900+ screen sizes
-  top: 0; left: 0; bottom: 0; right: 0;
-  position: absolute;
-  z-index: -1;
-  padding: 0;
-  margin: 0;
-  height: 100%;
-}
-
-#parallax2{
-  background: url(../Assets/images/Middle.png) no-repeat 0% 100%; //Does not yet work on 1900+ screen sizes
-  top: 0; left: 0; bottom: 0; right: 0;
-  position: absolute;
-  z-index: -1;
-  padding: 0;
-  margin: 0;
-  height: 100%;
-}
-
-#parallax3{
-  background: url(../Assets/images/Front.png) no-repeat 0% 100%; //Does not yet work on 1900+ screen sizes
-  top: 0; left: 0; bottom: 0; right: 0;
-  position: absolute;
-  z-index: -1;
-  padding: 0;
-  margin: 0;
-  height: 100%;
+  opacity: 1;
 }
 
 .logo{
   width: 60%;
   margin-top: 50px;
   filter: drop-shadow(5px 5px 5px black);
+
 }
 
 .home{
@@ -111,25 +75,32 @@ nav ul li a:hover + div{
   text-align: center;
   color: #fff;
   filter: drop-shadow(3px 3px 3px black);
-  z-index: -1;
+  z-index: -3;
+
 }
 
 .portfolio{
+  position: relative;
   background: #d8d8d8;
   min-height: 100%;
   height: auto;
+  z-index: -3;
 }
 
 .experienceEducation{
+  position: relative;
   background: #ffaeae;
   min-height: 100%;
   height: auto;
+  z-index: -3;
 }
 
 .getInTouch{
+  position: relative;
   background: #d8d8d8;
   min-height: 100%;
   height: auto;
+  z-index: -3;
 }
 
 .titleTextP{
@@ -141,6 +112,7 @@ nav ul li a:hover + div{
   position: absolute;
   padding-left: 5px;
   padding-right: 5px;
+  z-index: -2;
 }
 
 .titleTextG{
@@ -152,6 +124,7 @@ nav ul li a:hover + div{
   position: absolute;
   padding-left: 5px;
   padding-right: 5px;
+  z-index: -2;
 }
 
 .card{
@@ -161,18 +134,48 @@ nav ul li a:hover + div{
   border-width: thick;
   font-size: 17px;
   justify-content: center;
-  z-index: 0;
   transition-duration: 0.5s;
+  z-index: 0;
 }
 
-.card:hover{
+.hoverEffect{
   transform: scale(1.05);
   filter: drop-shadow(3px 3px 10px black);
-  z-index: 1;
+  z-index: -1;
 }
 
 .card-header{
   font-size: 20px;
+}
+
+#parallax1{
+  background: url(../Assets/images/Background.png) no-repeat 0% 100%; //Does not yet work on 1900+ screen sizes
+  top: 0; left: 0; bottom: 0; right: 0;
+  position: absolute;
+  z-index: -4;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+#parallax2{
+  background: url(../Assets/images/Middle.png) no-repeat 0% 100%; //Does not yet work on 1900+ screen sizes
+  top: 0; left: 0; bottom: 0; right: 0;
+  position: absolute;
+  z-index: -4;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+#parallax3{
+  background: url(../Assets/images/Front.png) no-repeat 0% 100%; //Does not yet work on 1900+ screen sizes
+  top: 0; left: 0; bottom: 0; right: 0;
+  position: absolute;
+  z-index: -4;
+  padding: 0;
+  margin: 0;
+  height: 100%;
 }
 
 /*
@@ -183,13 +186,18 @@ nav ul li a:hover + div{
  *   480-less    - phone landscape & smaller
  */
 
-@media all and (min-width: 1024px) and (max-width: 1280px) { }
-
-@media all and (min-width: 768px) and (max-width: 1024px) { }
-
-@media all and (min-width: 480px) and (max-width: 768px) { }
-
-@media all and (max-width: 480px) {
+@media (min-width: 1200px) { }
+@media (min-width: 992px) { }
+@media (min-width: 768px) {
+  /*Snap scrolling only compatible with Firefox at current time but under development for chrome and safari*/
+  .scroller {
+    scroll-snap-type: mandatory;
+    scroll-snap-destination: 0% 100%;
+    scroll-snap-points-y: repeat(100%);
+  }
+}
+@media (min-width: 576px) { }
+@media (max-width: 575px) {
  h1{
    font-size: 25px;
  }
