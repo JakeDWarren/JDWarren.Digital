@@ -1,0 +1,48 @@
+/*Setting header colour to sea blue(blue used for sea around the uk)*/
+header{
+  background-color:#a4cdfd;
+}
+
+/*Setting body content to align to the middle and background sea blue(blue used for sea around the uk)*/
+body {
+  text-align:center;
+  background-color: #a4cdfd;
+}
+
+/*Setting footer colour to sea blue(blue used for sea around the uk)*/
+footer{
+  background-color: #a4cdfd;
+}
+
+/*Aligning all 'h1' text to the center of the page. Setting colour to white. Defining font of Helvetica
+and size of 30px*/
+h1{
+  text-align: center;
+  color: white;
+  font-family: helvetica;
+  font-size: 30px;
+}
+
+/*Aligning all 'h2' text to the center of the page. Setting colour to white. Defining font of Helvetica
+and size of 15px*/
+h2{
+  text-align: center;
+  color: white;
+  font-family: helvetica;
+  font-size: 15px;
+}
+
+/*Aligning all 'h3' text to the center of the page. Setting colour to white. setting style to italic.Defining font of Helvetica
+and size of 15px.*/
+h3{
+  text-align: center;
+  color: white;
+  font-style: italic;
+  font-family: helvetica;
+  font-size: 15px;
+}
+
+/*Setting 'Refresh' button to font Helvetica*/
+button{
+  font-family: helvetica;
+}

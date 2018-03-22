@@ -5,14 +5,18 @@ body,html{
   font-family: 'Ubuntu', sans-serif;
   position: relative;
   background-color: black;
-  z-index: 0;
+  z-index: 4;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Ubuntu', sans-serif;
 }
 
 nav ul{
   list-style: none;
-  overflow: hidden;
   position: fixed;
   right: 8%;
+  z-index: 4;
 }
 
 nav ul li{
@@ -26,40 +30,36 @@ nav ul li a{
   height: 40px;
   font-size: 25px;
   text-align: center;
-  color: #d8d8d8;
+  color: #f6f5f5;
   background-color: #ffaeae;
-
 }
 
 nav ul li a:hover{
-  color: #ffaeae;
-  background-color: #d8d8d8;
-
+  color: #fdaeae;
+  background-color: #f6f5f5;
 }
 
 nav ul li div{
-  overflow: hidden;
-  display: flex;
   position: fixed;
+  display: flex;
   font-size: 50px;
   font-weight: bolder;
   color: #ffaeae;
-  filter: drop-shadow(5px 5px 5px black);
   top:0; right:0; left:0; bottom:0;
-  background-color: #d8d8d8;
+  background-color: #f6f5f5;
   width: 100%;
-  height: 100%;
+  height: 0%;
   transition-duration: 0.5s;
   opacity: 0;
   text-align: center;
   justify-content: center;
   align-items: center;
-  z-index: -2;
+  z-index: -1;
 }
 
 nav ul li a:hover + div{
-  display: flex;
   opacity: 1;
+  height: 100%;
 }
 
 .logo{
@@ -73,86 +73,160 @@ nav ul li a:hover + div{
   height: 100%;
   position: relative;
   text-align: center;
-  color: #fff;
+  color: #f6f5f5;
   filter: drop-shadow(3px 3px 3px black);
-  z-index: -3;
+  z-index: 1;
 
 }
 
 .portfolio{
   position: relative;
+  color: black;
   background: #d8d8d8;
   min-height: 100%;
   height: auto;
-  z-index: -3;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 
 .experienceEducation{
   position: relative;
+  color: black;
   background: #ffaeae;
   min-height: 100%;
   height: auto;
-  z-index: -3;
+  z-index: 1;
 }
 
 .getInTouch{
   position: relative;
+  color: black;
   background: #d8d8d8;
   min-height: 100%;
   height: auto;
-  z-index: -3;
+  z-index: 1;
+}
+
+.portfolioDescription{
+  padding-top: 12%;
+  padding-bottom: 10%;
+  text-align: center;
 }
 
 .titleTextP{
   height: 40px;
   width: auto;
   margin: 0 0 0 0;
-  color: #d8d8d8;
+  color: #f6f5f5;
   background-color: #ffaeae;
   position: absolute;
   padding-left: 5px;
   padding-right: 5px;
-  z-index: -2;
+  z-index: 2;
 }
 
 .titleTextG{
   height: 40px;
   width: auto;
   margin: 0 0 0 0;
-  color: #ffaeae;
+  color: #f6f5f5;
   background-color: #d8d8d8;
   position: absolute;
   padding-left: 5px;
   padding-right: 5px;
-  z-index: -2;
+  z-index: 2;
 }
 
 .card{
-  position: relative;
   color: #ffaeae;
   border-color: #ffaeae;
   border-width: thick;
   font-size: 17px;
   justify-content: center;
   transition-duration: 0.5s;
-  z-index: 0;
-}
-
-.hoverEffect{
-  transform: scale(1.05);
-  filter: drop-shadow(3px 3px 10px black);
-  z-index: -1;
 }
 
 .card-header{
   font-size: 20px;
 }
 
+.card:hover{
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.bPink{
+  background-color: #ffaeae;
+  padding-bottom: 8px;
+}
+
+.bGrey{
+  background-color: #d8d8d8;
+  padding-bottom: 8px;
+}
+
+.modal{
+  max-height: 96%;
+}
+
+.modal-body{
+  text-align: center;
+}
+
+.modal-body img{
+  max-height: 560px;
+  width: 80%;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+  background-color: #ffaeae;
+}
+
+.eeTimeline
+{
+	padding: 10px 0 30px 0px;
+}
+
+.main-timeline .timeline-content{
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    -webkit-box-shadow: 0 3px 0 #f6f5f5;
+    -moz-box-shadow: 0 3px 0 #f6f5f5;
+    -ms-box-shadow: 0 3px 0 #f6f5f5;
+    transition: all 0.3s ease 0s;
+}
+
+.main-timeline .icon{
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 300;
+    color: #ffaeae;
+    padding: 8px 28px;
+    background: #f6f5f5;
+    border-radius: 30px;
+}
+
+.main-timeline .title{
+    font-size: 24px;
+    font-weight: 500;
+    color: #f6f5f5;
+    margin-top: 30px;
+}
+
+.main-timeline .description{
+    font-size: 14px;
+    color: black;
+    line-height: 2;
+}
+
 #parallax1{
   background: url(../Assets/images/Background.png) no-repeat 0% 100%; //Does not yet work on 1900+ screen sizes
   top: 0; left: 0; bottom: 0; right: 0;
   position: absolute;
-  z-index: -4;
+  z-index: 0;
   padding: 0;
   margin: 0;
   height: 100%;
@@ -162,7 +236,7 @@ nav ul li a:hover + div{
   background: url(../Assets/images/Middle.png) no-repeat 0% 100%; //Does not yet work on 1900+ screen sizes
   top: 0; left: 0; bottom: 0; right: 0;
   position: absolute;
-  z-index: -4;
+  z-index: 0;
   padding: 0;
   margin: 0;
   height: 100%;
@@ -172,42 +246,78 @@ nav ul li a:hover + div{
   background: url(../Assets/images/Front.png) no-repeat 0% 100%; //Does not yet work on 1900+ screen sizes
   top: 0; left: 0; bottom: 0; right: 0;
   position: absolute;
-  z-index: -4;
+  z-index: 0;
   padding: 0;
   margin: 0;
   height: 100%;
 }
 
-/*
- *  Responsive Grid Media Queries
- *   1280-1024   - desktop (default grid)
- *   1024-768    - tablet landscape
- *   768-480     - tablet
- *   480-less    - phone landscape & smaller
- */
-
 @media (min-width: 1200px) { }
 @media (min-width: 992px) { }
 @media (min-width: 768px) {
-  /*Snap scrolling only compatible with Firefox at current time but under development for chrome and safari*/
-  .scroller {
-    scroll-snap-type: mandatory;
-    scroll-snap-destination: 0% 100%;
-    scroll-snap-points-y: repeat(100%);
+  .main-timeline .timeline-icon{
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #fff;
+      border: 2px solid #f6f5f5;
+      position: absolute;
+      top: 0;
+      left: 3px;
+      right: 0;
+      margin: 0 auto;
+      overflow: hidden;
+  }
+
+  .main-timeline .timeline-content{
+      width: 45%;
+      text-align: right;
+  }
+
+  .main-timeline{
+      position: relative;
+      transition: all 0.4s ease 0s;
+  }
+
+  .main-timeline:before{
+      content: "";
+      width: 3px;
+      height: 100%;
+      background: #d8d8d8;
+      position: absolute;
+      top: 0;
+      left: 50%;
+  }
+
+  .main-timeline .timeline{
+      position: relative;
+  }
+
+  .main-timeline .timeline:before,
+  .main-timeline .timeline:after{
+      content: "";
+      display: block;
+      width: 100%;
+      clear: both;
+  }
+
+  .main-timeline .timeline-content.right{
+      float: right;
+      text-align: left;
   }
 }
 @media (min-width: 576px) { }
 @media (max-width: 575px) {
  h1{
-   font-size: 25px;
+   font-size: 28px;
  }
 
  h2{
-   font-size: 20px;
+   font-size: 24px;
  }
 
  .titleTextP, .titleTextG{
-   height: 24px;
+   height: 28px;
 
  }
 
