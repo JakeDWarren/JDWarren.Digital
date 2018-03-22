@@ -57,11 +57,6 @@ nav ul li div{
   z-index: -1;
 }
 
-nav ul li a:hover + div{
-  opacity: 1;
-  height: 100%;
-}
-
 .socMenu ul{
     list-style: none;
     position: fixed;
@@ -299,7 +294,12 @@ hr{
   height: 100%;
 }
 
-@media (min-width: 1200px) { }
+@media (min-width: 1200px) {
+  nav ul li a:hover + div{
+    opacity: 1;
+    height: 100%;
+  }
+}
 @media (min-width: 992px) { }
 @media (min-width: 768px) {
   .main-timeline .timeline-icon{
