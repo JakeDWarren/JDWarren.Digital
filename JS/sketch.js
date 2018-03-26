@@ -1,5 +1,7 @@
+//Listens for scroll to be active to execute 'parallax' function
 window.addEventListener("scroll", parallax);
 
+//Function to adjust the Y offset of paralax images depending on scrolling activation
 function parallax() {
   var parallax1 = document.getElementById('parallax1');
   var parallax2 = document.getElementById('parallax2');
@@ -9,10 +11,13 @@ function parallax() {
   parallax2.style.top = -(window.pageYOffset/0)+'px';
 }
 
+//Execute functions on load of page
 window.onload = function() {
+  nightColor();
   currentYear();
 };
 
+//Function to set copyright year in footer
 function currentYear(){
   const date = new Date();
   const autoDate = document.querySelector('#autoDate');
@@ -20,7 +25,7 @@ function currentYear(){
 };
 
 //Function to set background to black when time is between 8pm and 7.59am
-function currentYear(){
+function nightColor(){
   var d = new Date();
   var n = d.getHours();
 
@@ -30,3 +35,8 @@ function currentYear(){
     console.log(n);
   }
 };
+
+$('.js-tilt').tilt({
+    glare: true,
+    maxGlare: 5.5
+})

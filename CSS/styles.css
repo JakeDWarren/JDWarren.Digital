@@ -1,20 +1,20 @@
+/*HTML and Body default settings*/
 body,html{
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Ubuntu', sans-serif;
   position: relative;
+  scroll-behavior: smooth;
   z-index: 4;
 }
 
-.timeD{
-  background-color: black;
+/*Removes space occuring between footer and body*/
+footer{
+  margin-top: -16px;
 }
 
-h1, h2, h3, h4, h5, h6{
-    font-family: 'Ubuntu', sans-serif;
-}
-
+/*Main navigation bar*/
 nav ul{
   list-style: none;
   position: fixed;
@@ -60,6 +60,14 @@ nav ul li div{
   z-index: -1;
 }
 
+/*Styling of 'hr'*/
+hr{
+  margin-top: 50px;
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(246, 245, 245), rgba(0, 0, 0, 0));
+}
+
+/*Social navigation bar*/
 .socMenu ul{
     list-style: none;
     position: fixed;
@@ -88,13 +96,19 @@ nav ul li div{
     background-color: #f6f5f5;
   }
 
+/*Size and shadow of logo*/
 .logo{
-  width: 60%;
-  margin-top: 50px;
+  width: 50%;
+  margin-top: 100px;
   filter: drop-shadow(5px 5px 5px black);
-
 }
 
+/*Makes page background black when applied though JS function 'nightColor' */
+.timeD{
+  background-color: black;
+}
+
+/*Landing/Home page styles*/
 .home{
   height: 100%;
   position: relative;
@@ -102,9 +116,9 @@ nav ul li div{
   color: #f6f5f5;
   filter: drop-shadow(3px 3px 3px black);
   z-index: 1;
-
 }
 
+/*Portfolio page styles*/
 .portfolio{
   position: relative;
   color: black;
@@ -116,6 +130,19 @@ nav ul li div{
   z-index: 1;
 }
 
+/*Potfolio page - Profile pic size*/
+.profile{
+  max-height: 200px;
+}
+
+/*Potfolio page - Description bio styles*/
+.portfolioDescription{
+  padding-top: 100px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+/*Experience and Education page styles*/
 .experienceEducation{
   position: relative;
   color: black;
@@ -125,6 +152,7 @@ nav ul li div{
   z-index: 1;
 }
 
+/*Get in Touch page styles*/
 .getInTouch{
   position: relative;
   color: black;
@@ -134,22 +162,12 @@ nav ul li div{
   z-index: 1;
 }
 
-.portfolioDescription{
-  padding-top: 100px;
-  padding-bottom: 80px;
-  text-align: center;
-}
-
+/*Get in Touch page - Contact form styles*/
 .formC{
   padding-top: 100px;
 }
 
-hr{
-  margin-top: 50px;
-  height: 2px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(246, 245, 245), rgba(0, 0, 0, 0));
-}
-
+/*Page title styles (Pink and Grey)*/
 .titleTextP{
   height: 40px;
   width: auto;
@@ -174,6 +192,22 @@ hr{
   z-index: 2;
 }
 
+/*Classes for background colors*/
+.bPink{
+  background-color: #ffaeae;
+  padding-bottom: 8px;
+}
+
+.bGrey{
+  background-color: #d8d8d8;
+  padding-bottom: 8px;
+}
+
+.bLGrey{
+  background-color: #f6f5f5;
+}
+
+/*Default styles for cards (override bootstrap)*/
 .card{
   color: #ffaeae;
   border-color: #ffaeae;
@@ -192,24 +226,7 @@ hr{
   z-index: 1;
 }
 
-.bPink{
-  background-color: #ffaeae;
-  padding-bottom: 8px;
-}
-
-.bGrey{
-  background-color: #d8d8d8;
-  padding-bottom: 8px;
-}
-
-.bLGrey{
-  background-color: #f6f5f5;
-}
-
-.profile{
-  max-height: 200px;
-}
-
+/*Default styles for modals*/
 .modal{
   max-height: 96%;
 }
@@ -223,10 +240,12 @@ hr{
   width: 80%;
 }
 
+/*Carousel naviagtion arrrows (next/prev) colors*/
 .carousel-control-prev-icon, .carousel-control-next-icon{
   background-color: #ffaeae;
 }
 
+/*Experience and Edcuation page - Timeline of jobs/education (responsive changes @media)*/
 .eeTimeline
 {
 	padding: 10px 0 30px 0px;
@@ -266,6 +285,7 @@ hr{
     line-height: 2;
 }
 
+/*Parallax scrolling effect*/
 #parallax1{
   background: url(../Assets/images/Background.png) no-repeat 0% 100%; //Does not yet work on 1900+ screen sizes
   top: 0; left: 0; bottom: 0; right: 0;
@@ -296,6 +316,7 @@ hr{
   height: 100%;
 }
 
+/*Media Queries to adjust items depending on screen size*/
 @media (min-width: 1200px) {
   nav ul li a:hover + div{
     opacity: 1;
@@ -304,6 +325,8 @@ hr{
 }
 @media (min-width: 992px) { }
 @media (min-width: 768px) {
+
+  /*Experience and Education page - Timeline is full when screen above 768px width*/
   .main-timeline .timeline-icon{
       width: 20px;
       height: 20px;
@@ -357,6 +380,8 @@ hr{
 }
 @media (min-width: 576px) { }
 @media (max-width: 575px) {
+
+/*Titles chnage size on extra small screens*/
  h1{
    font-size: 28px;
  }

@@ -16,10 +16,9 @@
   <title>JD Warren Design</title>
 </head>
 <body id="body" class=" ">
-  <div id="parallax1"></div>
-  <div id="parallax2"></div>
-  <div id="parallax3"></div>
   <header>
+
+    <!-- Main Nav Menu on Top -->
     <div id="navMenu">
       <nav>
         <ul>
@@ -28,11 +27,11 @@
             <div class="animated infinite pulse">Home</div>
           </li>
           <li>
-            <a href="#Portfolio"><span><i class="fas fa-user"></i></span></a>
+            <a href="#Portfolio"><i class="fas fa-user"></i></a>
             <div class="animated infinite pulse">Portfolio</div>
           </li>
           <li>
-            <a href="#Experience-Education"><span><i class="fas fa-info"></i></span></a>
+            <a href="#Experience-Education"><i class="fas fa-info"></i></a>
             <div class="animated infinite pulse">Experience and Education</div>
           </li>
           <li>
@@ -42,6 +41,8 @@
         </ul>
       </nav>
     </div>
+
+    <!-- Social Menu on Right -->
     <div class="socMenu">
       <ul>
         <li>
@@ -59,11 +60,15 @@
       </ul>
     </div>
   </header>
+
+  <!-- Landing/Home Section -->
   <section class="home" id="Home">
-    <img class="logo animated pulse" src="Assets/images/JD-Logo.png">
-    <div class="container">
+    <div data-tilt data-tilt-perspective="900" data-tilt-speed="400" class="h-100">
+      <img class="logo animated pulse" src="Assets/images/JD-Logo.png">
     </div>
   </section>
+
+  <!-- Portfolio Section -->
   <section class="portfolio pt-4" id="Portfolio">
     <h3 class="titleTextP">Portfolio</h3>
     <div class="portfolioDescription">
@@ -116,127 +121,7 @@
     </div>
   </section>
 
-  <!-- Modal -->
-  <div class="modal fade" id="DataVisualisation" tabindex="-1" role="dialog" aria-labelledby="DataVisualisation" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="DataVisualisation">Data Visualisation</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div id="mainSliderDV" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="Assets/images/DataVisualisation1.png">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="Assets/images/DataVisualisation2.png">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="Assets/images/DataVisualisation3.png">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="Assets/images/DataVisualisation4.png">
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#mainSliderDV" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#mainSliderDV" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <a href="Assets/projects/DataVisualisation/index.html" target="_blank"><button type="button" class="btn bPink">View Project <i class="fas fa-external-link-alt"></i></button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="DynamicEmergencies" tabindex="-1" role="dialog" aria-labelledby="DynamicEmergencies" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="DynamicEmergencies">Dynamic Emergencies</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div id="mainSliderDE" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="Assets/images/Spiral1.png">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="Assets/images/Spiral2.png">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="Assets/images/Spiral3.png">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="Assets/images/Spiral4.png">
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#mainSliderDE" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#mainSliderDE" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <a href="Assets/projects/DynamicEmergencies/index.html" target="_blank"><button type="button" class="btn bPink">View Project <i class="fas fa-external-link-alt"></i></button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="ConsumerClimate" tabindex="-1" role="dialog" aria-labelledby="ConsumerClimate" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="ConsumerClimate">Consumer Climate</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <img class="card-img" src="Assets/images/ConsumerClimatePoster.jpg">
-        </div>
-        <div class="modal-footer">
-          <a href="https://wp.me/p9dqIe-j" target="_blank"><button type="button" class="btn bGrey">View Blog <i class="fas fa-external-link-alt"></i></button></a>
-          <a href="Assets/images/ConsumerClimatePoster.jpg" target="_blank"><button type="button" class="btn bPink">Open Image <i class="fas fa-external-link-alt"></i></button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="EmergentMedia" tabindex="-1" role="dialog" aria-labelledby="EmergentMedia" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="EmergentMedia">Emergent Media</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <iframe width="100%" height="267"src="https://www.youtube.com/embed/oTCk6vm-95A?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="modal-footer">
-          <a href="https://youtu.be/oTCk6vm-95A" target="_blank"><button type="button" class="btn bPink">Go To Video <i class="fas fa-external-link-alt"></i></button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <!-- Experience and Education Section -->
   <section class="experienceEducation pt-4" id="Experience-Education">
     <h2 class="titleTextG">Education and Experience</h2>
     <div class="container pt-5">
@@ -256,7 +141,6 @@
                       </p>
                     </div>
                   </div>
-
                   <div class="timeline">
                     <div class="timeline-icon"></div>
                     <div class="timeline-content right">
@@ -267,7 +151,6 @@
                       </p>
                     </div>
                   </div>
-
                   <div class="timeline">
                     <div class="timeline-icon"></div>
                     <div class="timeline-content">
@@ -285,6 +168,8 @@
         </div>
       </div>
     </section>
+
+    <!-- Get in Touch Section -->
     <section class="getInTouch pt-4" id="GetInTouch">
       <h2 class="titleTextP">Get in Touch</h2>
       <div class="container formC">
@@ -311,14 +196,143 @@
         </form>
       </div>
     </section>
+
+    <!-- Copyright Footer -->
     <footer class="bGrey">
       <div class="text-center pt-1 pb-1">
         <small>Copyright &copy; Jake D Warren <span id="autoDate"></span></small>
       </div>
     </footer>
+
+    <!-- Background Parallax -->
+    <div id="parallax1"></div>
+    <div id="parallax2"></div>
+    <div id="parallax3"></div>
+
+    <!-- Modals for Portfolio Cards-->
+    <div class="modal fade" id="DataVisualisation" tabindex="-1" role="dialog" aria-labelledby="DataVisualisation" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="DataVisualisation">Data Visualisation</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="mainSliderDV" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="Assets/images/DataVisualisation1.png">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="Assets/images/DataVisualisation2.png">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="Assets/images/DataVisualisation3.png">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="Assets/images/DataVisualisation4.png">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#mainSliderDV" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#mainSliderDV" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="Assets/projects/DataVisualisation/index.html" target="_blank"><button type="button" class="btn bPink">View Project <i class="fas fa-external-link-alt"></i></button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="DynamicEmergencies" tabindex="-1" role="dialog" aria-labelledby="DynamicEmergencies" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="DynamicEmergencies">Dynamic Emergencies</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="mainSliderDE" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="Assets/images/Spiral1.png">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="Assets/images/Spiral2.png">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="Assets/images/Spiral3.png">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="Assets/images/Spiral4.png">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#mainSliderDE" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#mainSliderDE" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="Assets/projects/DynamicEmergencies/index.html" target="_blank"><button type="button" class="btn bPink">View Project <i class="fas fa-external-link-alt"></i></button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="ConsumerClimate" tabindex="-1" role="dialog" aria-labelledby="ConsumerClimate" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ConsumerClimate">Consumer Climate</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img class="card-img" src="Assets/images/ConsumerClimatePoster.jpg">
+          </div>
+          <div class="modal-footer">
+            <a href="https://wp.me/p9dqIe-j" target="_blank"><button type="button" class="btn bGrey">View Blog <i class="fas fa-external-link-alt"></i></button></a>
+            <a href="Assets/images/ConsumerClimatePoster.jpg" target="_blank"><button type="button" class="btn bPink">Open Image <i class="fas fa-external-link-alt"></i></button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="EmergentMedia" tabindex="-1" role="dialog" aria-labelledby="EmergentMedia" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="EmergentMedia">Emergent Media</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <iframe width="100%" height="267"src="https://www.youtube.com/embed/oTCk6vm-95A?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <a href="https://youtu.be/oTCk6vm-95A" target="_blank"><button type="button" class="btn bPink">Go To Video <i class="fas fa-external-link-alt"></i></button></a>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="JS/tilt.jquery.min.js"></script>
     <script src="JS/sketch.js"></script>
   </body>
   </html>
