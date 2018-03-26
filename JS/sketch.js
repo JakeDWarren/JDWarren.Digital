@@ -35,8 +35,3 @@ function nightColor(){
     console.log(n);
   }
 };
-
-$('.js-tilt').tilt({
-    glare: true,
-    maxGlare: 5.5
-})
