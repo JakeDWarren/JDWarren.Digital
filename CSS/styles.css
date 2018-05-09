@@ -11,8 +11,8 @@ body,html{
 
 /*Removes space occuring between footer and body*/
 footer{
-  margin-top: -16px;
-  padding-top: 10px;
+  margin-top: -1.2%;
+  padding-top: -10px;
 }
 
 /*Main navigation bar*/
@@ -34,13 +34,13 @@ nav ul li a{
   height: 40px;
   font-size: 25px;
   text-align: center;
-  color: #f6f5f5;
-  background-color: #ffaeae;
+  color: #ffffff;
+  background-color: #fc7e99;
 }
 
 nav ul li a:hover{
-  color: #fdaeae;
-  background-color: #f6f5f5;
+  color: #fc7e99;
+  background-color: #ffffff;
 }
 
 nav ul li div{
@@ -48,9 +48,9 @@ nav ul li div{
   display: flex;
   font-size: 50px;
   font-weight: bolder;
-  color: #ffaeae;
+  color: #fc7e99;
   top:0; right:0; left:0; bottom:0;
-  background-color: #f6f5f5;
+  background-color: #ffffff;
   width: 100%;
   height: 0%;
   transition-duration: 0.5s;
@@ -65,7 +65,7 @@ nav ul li div{
 hr{
   margin-top: 50px;
   height: 2px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(246, 245, 245), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to right, rgba(250, 250, 250, 0), rgba(250, 250, 250, 250), rgba(250, 250, 250, 0));
 }
 
 /*Social navigation bar*/
@@ -88,19 +88,19 @@ hr{
     height: 40px;
     font-size: 25px;
     text-align: center;
-    color: #f6f5f5;
-    background-color: #ffaeae;
+    color: #ffffff;
+    background-color: #fc7e99;
   }
 
 .socMenu ul li a:hover{
-    color: #fdaeae;
-    background-color: #f6f5f5;
+    color: #fc7e99;
+    background-color: #ffffff;
   }
 
 /*Size and shadow of logo*/
 .logo{
-  width: 50%;
-  margin-top: 100px;
+  width: 40%;
+  padding-top: 120px;
   filter: drop-shadow(5px 5px 5px black);
 }
 
@@ -112,9 +112,9 @@ hr{
 /*Landing/Home page styles*/
 .home{
   height: 100%;
-  position: relative;
   text-align: center;
-  color: #f6f5f5;
+  position: relative;
+  color: #ffffff;
   filter: drop-shadow(3px 3px 3px black);
   z-index: 1;
 }
@@ -123,12 +123,17 @@ hr{
 .portfolio{
   position: relative;
   color: black;
-  background: radial-gradient(#ebebeb, #d8d8d8 75%);
+  background: radial-gradient(#DEDDEB, #c6c9db 75%);
   min-height: 100%;
   height: auto;
   justify-content: center;
   align-items: center;
   z-index: 1;
+}
+
+.portfolio a:link, .portfolio a:visited, .portfolio a:hover {
+  color: #fc7e99;
+  text-decoration: none;
 }
 
 /*Potfolio page - Profile pic size*/
@@ -147,7 +152,7 @@ hr{
 .experienceEducation{
   position: relative;
   color: black;
-  background: radial-gradient(#ffc6c6, #ffaeae 75%);
+  background: radial-gradient(#FCB2C1, #fc7e99 75%);
   min-height: 100%;
   height: auto;
   z-index: 1;
@@ -157,8 +162,8 @@ hr{
 .getInTouch{
   position: relative;
   color: black;
-  background: radial-gradient(#ebebeb, #d8d8d8 75%);
-  min-height: 100%;
+  background: radial-gradient(#DEDDEB, #c6c9db 75%);
+  min-height: 95%;
   height: auto;
   z-index: 1;
 }
@@ -173,8 +178,8 @@ hr{
   height: 40px;
   width: auto;
   margin: 0 0 0 0;
-  color: #f6f5f5;
-  background-color: #ffaeae;
+  color: #ffffff;
+  background-color: #fc7e99;
   position: absolute;
   padding-left: 5px;
   padding-right: 5px;
@@ -185,8 +190,8 @@ hr{
   height: 40px;
   width: auto;
   margin: 0 0 0 0;
-  color: #f6f5f5;
-  background-color: #d8d8d8;
+  color: #ffffff;
+  background-color: #c6c9db;
   position: absolute;
   padding-left: 5px;
   padding-right: 5px;
@@ -195,23 +200,23 @@ hr{
 
 /*Classes for background colors*/
 .bPink{
-  background-color: #ffaeae;
+  background-color: #fc7e99;
   padding-bottom: 8px;
 }
 
 .bGrey{
-  background-color: #d8d8d8;
+  background-color: #c6c9db;
   padding-bottom: 8px;
 }
 
 .bLGrey{
-  background-color: #f6f5f5;
+  background-color: #ffffff;
 }
 
 /*Default styles for cards (override bootstrap)*/
 .card{
-  color: #ffaeae;
-  border-color: #ffaeae;
+  color: #fc7e99;
+  border-color: #fc7e99;
   border-width: thick;
   font-size: 17px;
   justify-content: center;
@@ -243,7 +248,7 @@ hr{
 
 /*Carousel naviagtion arrrows (next/prev) colors*/
 .carousel-control-prev-icon, .carousel-control-next-icon{
-  background-color: #ffaeae;
+  background-color: #fc7e99;
 }
 
 /*Experience and Edcuation page - Timeline of jobs/education (responsive changes @media)*/
@@ -257,9 +262,9 @@ hr{
     padding: 20px;
     border-radius: 5px;
     text-align: center;
-    -webkit-box-shadow: 0 3px 0 #f6f5f5;
-    -moz-box-shadow: 0 3px 0 #f6f5f5;
-    -ms-box-shadow: 0 3px 0 #f6f5f5;
+    -webkit-box-shadow: 0 3px 0 #ffffff;
+    -moz-box-shadow: 0 3px 0 #ffffff;
+    -ms-box-shadow: 0 3px 0 #ffffff;
     transition: all 0.3s ease 0s;
 }
 
@@ -267,16 +272,16 @@ hr{
     display: inline-block;
     font-size: 22px;
     font-weight: 300;
-    color: #ffaeae;
+    color: #fc7e99;
     padding: 8px 28px;
-    background: #f6f5f5;
+    background: #ffffff;
     border-radius: 30px;
 }
 
 .main-timeline .title{
     font-size: 24px;
     font-weight: 500;
-    color: #f6f5f5;
+    color: #ffffff;
     margin-top: 30px;
 }
 
@@ -288,7 +293,7 @@ hr{
 
 /*Parallax scrolling effect*/
 #parallax1{
-  background: url(../Assets/images/Background.png) no-repeat 0% 100%; //Does not yet work on 1900+ screen sizes
+  background: url(../Assets/images/Back-Mountains.svg) no-repeat 0% 100%; //Does not yet work on 1900+ screen sizes
   top: 0; left: 0; bottom: 0; right: 0;
   position: absolute;
   z-index: 0;
@@ -298,7 +303,7 @@ hr{
 }
 
 #parallax2{
-  background: url(../Assets/images/Middle.png) no-repeat 0% 100%; //Does not yet work on 1900+ screen sizes
+  background: url(../Assets/images/Middle-Mountains.svg) no-repeat 0% 100%; //Does not yet work on 1900+ screen sizes
   top: 0; left: 0; bottom: 0; right: 0;
   position: absolute;
   z-index: 0;
@@ -308,7 +313,7 @@ hr{
 }
 
 #parallax3{
-  background: url(../Assets/images/Front.png) no-repeat 0% 100%; //Does not yet work on 1900+ screen sizes
+  background: url(../Assets/images/Front-Mountains.svg) no-repeat 0% 100%; //Does not yet work on 1900+ screen sizes
   top: 0; left: 0; bottom: 0; right: 0;
   position: absolute;
   z-index: 0;
@@ -333,7 +338,7 @@ hr{
       height: 20px;
       border-radius: 50%;
       background: #fff;
-      border: 2px solid #f6f5f5;
+      border: 2px solid #ffffff;
       position: absolute;
       top: 0;
       left: 3px;
@@ -356,7 +361,7 @@ hr{
       content: "";
       width: 3px;
       height: 100%;
-      background: #d8d8d8;
+      background: #c6c9db;
       position: absolute;
       top: 0;
       left: 50%;
