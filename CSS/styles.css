@@ -133,6 +133,21 @@ hr{
   z-index: 1;
 }
 
+.flexContainerRow{
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: -10%;
+  margin-right: -10%;
+}
+
+.cardContainer{
+  display: flex;
+  max-width: 250px;
+  height: auto;
+}
+
 .portfolio a:link, .portfolio a:visited, .portfolio a:hover {
   color: #fc7e99;
   text-decoration: none;
