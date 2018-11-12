@@ -1,0 +1,83 @@
+html, body {
+  display:flex;
+  flex-flow: column;
+  min-height: 100%;
+  font-family: 'PT Sans Narrow', sans-serif;
+  background: #263145;
+  color: black;
+  width: 100%;
+
+ }
+
+ .bodyContainer{
+   justify-content: center;
+   align-items: center;
+ }
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 100px;
+  color: white;
+}
+
+h5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+form.search {
+  display: flex;
+  justify-content: center;
+}
+
+.form-control {
+  width: 50vw;
+  height: 40px;
+}
+
+.input-group {
+  height: 40px;
+  width: 40px;
+}
+
+.babyLogo-container {
+   padding: 10px;
+  }
+
+.babyLogo {
+ width: 60px;
+ height: auto;
+}
+
+.pink{
+  background-color: #ee4266;
+}
+
+
+.btn:focus,.btn:active,textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: #53d8fb;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #53d8fb;
+  outline: 0 none;
+}

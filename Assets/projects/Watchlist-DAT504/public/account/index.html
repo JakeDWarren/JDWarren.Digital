@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- PT Sans Narrow Font -->
+    <base href="/"/>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/Account/css/styles.css" />
+    <title>Login</title>
+</head>
+
+<body>
+  <div class="babyLogo-container">
+  <img class="babyLogo" src="/Account/Resources/PausePlay.png"></img>
+  </div>
+    <div class="container">
+          <div class="center box">
+            <div class="flex-container-col">
+                <h2>Login</h2>
+                <form action="/login" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Username" name="username">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password" name="password">
+                    </div>
+                    <div class="input-group">
+                        <button class="btn pink" type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
+            <hr class="style-one">
+            <div class="flex-container-col">
+                <h2>Register Account</h2>
+                <form action="/addUser" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Username" name="Username">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password" name="Password">
+                    </div>
+                    <div class="input-group">
+                        <button class="btn pink" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+         </div>
+   </div>
+</body>
+<!-- <script>
+    let url = 'http://localhost:3000/getQuote';
+    const quoteList = document.querySelector('.quoteList');
+    fetch(url)
+        .then(res => res.json())
+        .then((data) => {
+            let dataFeed = data.map((quote) => {
+                return `<div class="col-6">
+                            <div class="card card-body mb-3">
+                                <h1>Film Name: ${quote.filmName}</h1>
+                                <h4>Character Name: ${quote.characterName}</h4>
+                                <i>Quote: "${quote.quote}"</i>
+                            </div>
+                        </div>`
+            }).join('');
+            quoteList.innerHTML = dataFeed;
+        })
+        .catch(err => { throw err });
+</script> -->
+
+</html>

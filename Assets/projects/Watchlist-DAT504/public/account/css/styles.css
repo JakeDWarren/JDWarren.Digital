@@ -1,0 +1,201 @@
+html, body {
+  display:flex;
+  flex-flow: column;
+  font-family: 'PT Sans Narrow', sans-serif;
+  background: radial-gradient(#676e7c, #263145  85%);
+  color: #f2fdff;
+  height: 100%;
+  width: auto;
+}
+
+header{
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1;
+}
+
+main {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 5;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 4;
+}
+
+
+.flex-container-col{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+nav {
+  justify-content: space-between;
+
+}
+
+.accountLinks {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navItem {
+  margin: 5px;
+}
+
+.mainLogo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainLogo {
+  width: 200%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  height: auto;
+  width: 100%;
+  height: auto;
+  justify-content: flex;
+  align-items: center;
+}
+
+.box{
+  background-color: rgb(38, 49, 69);
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: auto%;
+  width: auto%;
+  padding-bottom: 45px;
+  border-radius: 15px;
+  border-color: #53d8fb;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.075) inset, 0 0 8px #53d8fb;
+  outline: 0 none;
+}
+
+
+
+hr.style-one {
+  width: 100%;
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: -webkit-linear-gradient(left, #ccc, #53d8fb, #ccc);
+  background-image: -moz-linear-gradient(left, #ccc, #53d8fb, #ccc);
+  background-image: -ms-linear-gradient(left, #ccc, #53d8fb, #ccc);
+  background-image: -o-linear-gradient(left, #ccc, #53d8fb, #ccc);
+}
+
+.container{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.babyLogo-container {
+  padding: 10px;
+}
+
+.babyLogo {
+  width: 60px;
+  height: auto;
+}
+
+
+
+/*!!!!stuff i added!!!!!!! */
+input[type="text"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="text"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+input[type="password"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="password"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+
+
+/*!!!!stuff i added!!!!*/
+
+
+
+
+
+
+/*Button backgorund set to theme white*/
+.btn {
+  background-color:#f2fdff;
+}
+
+/*Outer glow on bootstrap buttons and form fields set to theme blue*/
+.btn:focus,.btn:active,textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: #53d8fb;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #53d8fb;
+  outline: 0 none;
+}
+
+/*Shortcut to to apply background of theme pink*/
+.pink{
+  background-color: #ee4266;
+}
+
+/*Make search section flex*/
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

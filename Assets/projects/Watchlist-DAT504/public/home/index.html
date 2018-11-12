@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <!-- PT Sans Narrow Font -->
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="home/css/styles.css">
+  <title>Watchlist</title>
+</head>
+<body>
+
+<!-- Nav bar containing Account button -->
+<header>
+  <nav class="flex-container-row">
+      <button type="button" onclick="window.location.href='Account/index.html'" class="navItem btn btn-sm">Account</button>
+  </nav>
+</header>
+
+<!-- The main area which has the input form, logo and results -->
+<main>
+  <div class="flex-container-col search">
+    <div class="flex-container mainLogo-container">
+      <img class="mainLogo" src="home/Resources/Logos/LogoWhite.svg" alt="Watchlist Logo">
+    </div>
+    <div class="input-group">
+      <form class='search' method='post' action='/search'>
+        <input id="userSearch" type="text" name='name' class="form-control" placeholder="Enter any movie or show here..." aria-label="Search" aria-describedby="basic-addon2">
+          <div class ="input-group-append">
+            <button id="searchBtn" class="btn pink" type="submit">Search</button>
+          </div>
+      </form>
+    </div>
+    <div id="horizontal-list">
+      <div id="Movies">
+        <div id="movieDetail" class="flex-container-col flex-centre movieContainer"></div>
+      </div>
+    </div>
+    </div>
+    <script>
+    document.getElementById('searchBtn').addEventListener('click', function (event) {
+      var movieDetail = document.getElementById('movieDetail');
+
+      event.preventDefault()
+      console.log("clicked it")
+
+      const searchName = document.getElementById('userSearch').value;
+      console.log(userSearch.value);
+
+      fetch('/search', {
+        method: 'POST',
+        body: JSON.stringify({
+          name: searchName
+        }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        var movieInfoArray = data;
+        resultsL = movieInfoArray.length;
+        console.log(resultsL);
+
+        resultsText = "";
+        if (resultsL > 5){
+              endpoint = 5;
+          } else {
+              endpoint = resultsL;
+          }
+        for (var i = 0; i < endpoint; i++) {
+          resultsText += "<div class='oneResult card'>";
+          resultsText += "<div>" + movieInfoArray[i].title + "</div>";
+          resultsText += "<div> " + movieInfoArray[i].runtime + "</div>";
+            resultsText += "<div class='image'>Watch it on: ";
+            let urls = '';
+            var offersL = movieInfoArray[i].offers.length;
+            var offersEndpoint = 0;
+            if (offersL > 5){
+              offersEndpoint = 5;
+            } else {
+              offersEndpoint = offersL;
+            }
+            for (var j = 0; j< offersEndpoint; j++){
+                var urlstr = movieInfoArray[i].offers[j].urls.standard_web;
+                resultsText += '<a href="';
+                resultsText += movieInfoArray[i].offers[j].urls.standard_web;
+                if (urlstr.includes("sky")){
+                    resultsText += '"><img class="applogos" src="home/Resources/applogos/skygo.png" /></a>';
+                } else if (urlstr.includes("netflix")){
+                    resultsText += '"><img class="applogos" src="home/Resources/applogos/netflix.png" /></a>';
+                } else if (urlstr.includes("nowtv")){
+                    resultsText += '"><img class="applogos" src="home/Resources/applogos/nowtv.png" /></a>';
+                } else if (urlstr.includes("amazon")){
+                    resultsText += '"><img class="applogos" src="home/Resources/applogos/amazon.png" /></a>';
+                } else if (urlstr.includes("play.google")){
+                    resultsText += '"><img class="applogos" src="home/Resources/applogos/googleplay.png" /></a>';
+                } else if (urlstr.includes("itunes")){
+                  resultsText += '"><img class="applogos" src="home/Resources/applogos/itunes.png" /></a>';
+                } else if (urlstr.includes("talktalktv")){
+                  resultsText += '"> TalkTalkTV</a>';
+                } else if (urlstr.includes("microsoft")){
+                  resultsText += '"><img class="applogos" src="home/Resources/applogos/microsoft.png" /></a>';
+                } else if (urlstr.includes("rakuten")){
+                  resultsText += '"> Rakuten</a>';
+                } else if (urlstr.includes("chili")){
+                  resultsText += '"> Chili</a>';
+                } else if (urlstr.includes("youtube")){
+                  resultsText += '"><img class="applogos" src="home/Resources/applogos/youtube.png" /></a>';
+                } else if (!urlstr.includes("www.")){
+                  resultsText += '"></a>';
+                } else {
+                  resultsText += '"> Link' + [j+1] + '</a>';
+                }
+
+                urls += movieInfoArray[i].offers[j].urls.standard_web;
+                urls += " ";
+
+            }
+            resultsText += "</div>";
+            resultsText += "</div>"
+        }
+
+        movieDetail.innerHTML= "<h3>Your results:</h3>" + resultsText;
+      })
+
+
+    })
+    </script>
+</main>
+
+<!-- Platform images displayed at bottom of homepage -->
+<footer>
+  <div class="flex-container-row flex-centre flex-footer">
+    <img class="platformImage ml-4 mr-4" src="home/Resources/PlatformLogos/Netflix.png" alt="Netflix Logo">
+    <img class="platformImage ml-4 mr-4" src="home/Resources/PlatformLogos/Amazon Prime White.png" alt="Amazon Prime Video Logo">
+    <img class="platformImage ml-4 mr-4" src="home/Resources/PlatformLogos/NOW TV.png" alt="NOW TV Logo">
+    <img class="platformImage ml-4 mr-4" src="home/Resources/PlatformLogos/Google Play.png" alt="Google Play Logo">
+    <img class="platformImage ml-4 mr-4" src="home/Resources/PlatformLogos/iTunes Logo White.png" alt="Itunes Logo">
+    <img class="platformImage" src=" home/Resources/PlatformLogos/Sky TV.png" alt="Sky TV Logo">
+  </div>
+</footer>
+
+<!-- Scripts -->
+
+  <!-- Connect to JQuery (Bootstrap Dependency) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Connect to Bootstrap -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
