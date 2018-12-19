@@ -28,9 +28,9 @@ function setup() {
   canvas = createCanvas(w,h);
   canvas.parent("sketchContainer");
 
-  pinkCircle = loadImage("../assets/images/PinkCircle.svg");
-  darkBlueCircle = loadImage("../assets/images/darkBlueCircle.svg");
-  blueCircle = loadImage("../assets/images/blueCircle.svg");
+  pinkCircle = loadImage("../Assets/images/PinkCircle.svg");
+  darkBlueCircle = loadImage("../Assets/images/DarkBlueCircle.svg");
+  blueCircle = loadImage("../Assets/images/BlueCircle.svg");
 
   for (let i=0; i<arraySize; i++){
     t= random();
