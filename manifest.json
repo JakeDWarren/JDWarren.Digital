@@ -1,0 +1,15 @@
+{
+  "short_name": "JDW Design",
+  "name": "JD Warren Design",
+  "icons": [
+    {
+      "src":"Assets/images/JDWDesignWhite.png",
+      "sizes": "1146x657",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#000",
+  "theme_color": "#67bfc7",
+  "display": "standalone"
+}
